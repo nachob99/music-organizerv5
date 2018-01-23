@@ -227,5 +227,20 @@ public class MusicOrganizer
 
         }
     }
+    
+    /**
+     * Borra tracks de un artista
+     */
+    public void removeByArtist(String artist)
+    {
+        Iterator<Track> it = tracks.iterator();
+        while(it.hasNext())
+        {
+            if(it.next().getArtist().contains(artist)) 
+            {
+                it.remove();
+            } 
+        }
+    }
 }
 
