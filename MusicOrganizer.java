@@ -200,6 +200,9 @@ public class MusicOrganizer
             }
         }
     }
+    /**
+     * Elegir la cancion por su año
+     */
 
     public void setTrackOfYear(int index,int year){
         if(index >= 0 && index < tracks.size()){
@@ -207,6 +210,10 @@ public class MusicOrganizer
         }
 
     }
+     
+    /**
+     * informe por pantalla de si en este momento se est? reproduciendo m?sica o no
+     */
 
     public void isPlaying(){
         if(playing){
@@ -237,6 +244,21 @@ public class MusicOrganizer
         while(it.hasNext())
         {
             if(it.next().getArtist().contains(artist)) 
+            {
+                it.remove();
+            } 
+        }
+    }
+    
+      /**
+     * borra los elementos de un titulo determinado
+     */
+    public void removeByTitle(String title)
+    {
+        Iterator<Track> it = tracks.iterator();
+        while(it.hasNext())
+        {
+            if(it.next().getTitle().contains(title)) 
             {
                 it.remove();
             } 

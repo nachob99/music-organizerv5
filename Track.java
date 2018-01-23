@@ -13,9 +13,10 @@ public class Track
     private String title;
     // Where the track is stored.
     private String filename;
+    //Numero reproduciones
 
     private int playCount;
-    
+    // Año
     private int year;
 
     /**
@@ -106,13 +107,19 @@ public class Track
     public void incremementPlayCount(){
         playCount++;
     }
-    
+
+    /**
+     * NOs muestra el año
+     */
     public int getYear(){
         return year;
     }
-    
+
+    /**
+     * NOs permite poner el año
+     */
     public void setYear(int year){
-    this.year = year;
+        this.year = year;
     }
 
 }
